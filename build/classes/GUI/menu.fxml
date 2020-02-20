@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="505.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.MenuController">
+   <children>
+      <Label layoutX="50.0" layoutY="80.0" prefHeight="17.0" prefWidth="104.0" text="Immatriculation  : ">
+         <font>
+            <Font name="Gadugi Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="200.0" prefHeight="17.0" prefWidth="104.0" text="Horaire  :">
+         <font>
+            <Font name="Gadugi Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="140.0" prefHeight="17.0" prefWidth="129.0" text="Ligne de Transport  :">
+         <font>
+            <Font name="Gadugi Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="260.0" prefHeight="17.0" prefWidth="104.0" text="Chauffeur   :">
+         <font>
+            <Font name="Gadugi Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="320.0" prefHeight="17.0" prefWidth="129.0" text="Nombre de Place : ">
+         <font>
+            <Font name="Gadugi Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="imm" layoutX="200.0" layoutY="75.0" />
+      <ComboBox fx:id="Ligne" layoutX="200.0" layoutY="137.0" prefWidth="150.0" />
+      <TextField fx:id="hh" layoutX="240.0" layoutY="198.0" prefHeight="25.0" prefWidth="25.0" />
+      <TextField fx:id="mm" layoutX="270.0" layoutY="198.0" prefHeight="25.0" prefWidth="25.0" />
+      <Label layoutX="265.0" layoutY="200.0" text=":">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="chauffeur" layoutX="200.0" layoutY="257.0" prefWidth="150.0" />
+      <TextField fx:id="nbrplace" layoutX="198.0" layoutY="317.0" />
+      <Button fx:id="ajouter" layoutX="100.0" layoutY="411.0" mnemonicParsing="false" onAction="#insertdata" stylesheets="@Style.css" text="Ajouter">
+         <styleClass>
+            <String fx:value="Button" />
+            <String fx:value="Button2" />
+         </styleClass></Button>
+      <Button fx:id="annuler" layoutX="250.0" layoutY="409.0" mnemonicParsing="false" onAction="#directAffi" stylesheets="@Style.css" text="Annuler">
+         <styleClass>
+            <String fx:value="Button" />
+            <String fx:value="Button2" />
+         </styleClass></Button>
+      <Button fx:id="vider" layoutX="335.0" layoutY="29.0" mnemonicParsing="false" onAction="#vider" prefHeight="25.0" prefWidth="21.0">
+         <graphic>
+            <ImageView fitHeight="21.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/delete-sign--v1.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="174.0" layoutY="353.0" mnemonicParsing="false" onAction="#importer" stylesheets="@Style.css" text="Image">
+         <styleClass>
+            <String fx:value="Button" />
+            <String fx:value="Button2" />
+         </styleClass></Button>
+      <ImageView fx:id="imgv" fitHeight="7.0" fitWidth="5.0" layoutX="250.0" layoutY="362.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

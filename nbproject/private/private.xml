@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/Services/ServiceClasse.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>30</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/ProjetaccueilController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Entities/Bus.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Services/Service_generer_Qr_code.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/Menuaccueil.fxml</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/AffichageBusController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/reservationBus.fxml</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/ListeController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/ReserverController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/AjoutBusController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/MenuController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Services/ServiceClasse.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/liste.fxml</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Services/Service_mail.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/interfaces/MenuaccueilController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/AcceuilController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Entities/Reservation.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/MainApp.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Services/ServiceReservation.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/GUI/ReservationBusController.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Services/ServiceNiveau.java</file>
+            <file>file:/C:/Users/chadi/Documents/NetBeansProjects/Projet/src/Services/ServiceBus.java</file>
+        </group>
+    </open-files>
+</project-private>

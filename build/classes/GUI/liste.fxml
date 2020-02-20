@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.ListeController">
+   <children>
+      <TableView fx:id="tab" layoutX="-2.0" layoutY="53.0" prefHeight="347.0" prefWidth="600.0" style="-fx-border-color: #EE82EE;">
+         <columns>
+            <TableColumn fx:id="nom_p" prefWidth="90.0" text="Nom" />
+            <TableColumn fx:id="type" prefWidth="175.0" text="type" />
+            <TableColumn fx:id="date_debut" prefWidth="180.0" text="date_debut" />
+            <TableColumn fx:id="date_fin" prefWidth="153.0" text="date_fin" />
+         </columns></TableView>
+      <Button fx:id="retour" layoutX="463.0" layoutY="14.0" mnemonicParsing="false" onAction="#direct" prefHeight="27.0" prefWidth="88.0" stylesheets="@Style.css" text="     Retour">
+         <styleClass>
+            <String fx:value="Button" />
+            <String fx:value="Button2" />
+         </styleClass>
+      </Button>
+      <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="470.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/arrow-back-512.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
