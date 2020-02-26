@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Projet_jardin_enfant.jnlp">
+  <information>
+    <title>Projet_jardin_enfant</title>
+    <vendor>Dora</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Projet_jardin_enfant.jar" size="1130487" download="eager" />
+    <jar href="lib\JavaFx_Generator_Full_2.0.jar" size="5328370" download="eager" />
+    <jar href="lib\itextpdf-5.3.5.jar" size="1852860" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Projet_jardin_enfant" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="interfaces.Projet_jardin_enfant"  name="Projet_jardin_enfant" />
+  <update check="always"/>
+</jnlp>

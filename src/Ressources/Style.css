@@ -1,0 +1,105 @@
+
+
+#anchor {
+    -fx-background-image:url('Back1.jpg');
+}
+.Background {
+    
+    -fx-background-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+.Button {
+    -fx-background-radius: 20;
+    -fx-background-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+.Button3 {
+    -fx-background-radius: 20;
+    -fx-background-color: 
+        linear-gradient(to left, #FCB215, #ED7EB0);
+   
+}
+.Button3:hover {
+   -fx-background-color: 
+        linear-gradient(to left, #FCB215, #ED7EB0);
+   
+}
+
+.Button:hover {
+   -fx-background-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+.Button2 {
+    -fx-background-radius: 20;
+    -fx-background-color:#FFFFFF;
+    -fx-border-radius: 20; 
+    -fx-border-color: 
+        
+        linear-gradient(to left, #725FA7, #ED7EB0);
+    -fx-text-fill: linear-gradient(to left, #725FA7, #ED7EB0);
+}
+.Button2:hover {
+   -fx-border-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+.table-view{
+   -fx-background-color: transparent;
+   -fx-border-radius: 20;
+   -fx-background-radius: 20;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(#FCB215 0%, #ED7EB0 100%);
+    -fx-background-radius: 20;
+}
+
+
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+
+.table-row-cell:selected {
+    -fx-background-color: #393942;
+    -fx-background-insets: 0;
+    -fx-background-radius: 10;
+}
+.table-view .filler{
+    -fx-background-color: #ED7EB0;
+}
+ .tab-pane *.tab-header-area *.tab-header-background {
+   
+     -fx-background-color: white ;
+     
+}
+
+.tab-pane {
+  -fx-tab-min-width:50px;
+  -fx-tab-max-width:50px;
+  -fx-tab-min-height:20px;
+  -fx-tab-max-height:20px;
+}
+
+.tab {
+
+  -fx-background-color:#FCB215 ;
+}
+
+.tab:selected {
+    -fx-background-color:linear-gradient(#FCB215 0%, #ED7EB0 100%) ;
+}   

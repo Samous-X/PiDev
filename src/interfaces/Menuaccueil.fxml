@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="nomjardin" prefHeight="357.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interfaces.MenuaccueilController">
+   <children>
+      <ImageView fx:id="back" fitHeight="400.0" fitWidth="294.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/Back1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="320.0" layoutY="53.0" prefHeight="37.0" prefWidth="265.0" text="Menu Principale" textFill="#830a77">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnmodifp" layoutX="327.0" layoutY="106.0" mnemonicParsing="false" onAction="#modifprofil" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Modifier Mon profil" />
+      <Button fx:id="btnGererEnfant" layoutX="327.0" layoutY="195.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Gérer Enfant" />
+      <Button fx:id="btnGererAct" layoutX="327.0" layoutY="150.0" mnemonicParsing="false" onAction="#GererStaff" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Gérer Staff" />
+      <Button fx:id="btnGererEven" layoutX="327.0" layoutY="239.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Gérer Evenement" />
+      <Button fx:id="btnGererStore" layoutX="327.0" layoutY="283.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Gérer Store" />
+      <Button fx:id="btnGererTrans" layoutX="327.0" layoutY="327.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Gérer Ligne Transport">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="Logo" fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="design" fitHeight="150.0" fitWidth="200.0" layoutX="485.0" layoutY="152.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/photo1.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="resnomjardin" layoutX="327.0" layoutY="22.0">
+         <effect>
+            <GaussianBlur radius="63.0" />
+         </effect></TextField>
+      <ImageView fx:id="retour" fitHeight="61.0" fitWidth="61.0" layoutX="616.0" layoutY="8.0" onMouseClicked="#Retour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/return.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
