@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="inscriptionPane" prefHeight="435.0" prefWidth="681.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.AjouterParentController">
+    <stylesheets>
+        <URL value="@/Ressources/Style.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="435.0" fitWidth="305.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/Back1.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="tfnom" layoutX="391.0" layoutY="88.0" promptText="Nom" style="-fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@../Ressources/Style.css" />
+      <TextField fx:id="tfprenom" layoutX="391.0" layoutY="123.0" promptText="Prenom" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../Ressources/Style.css" />
+      <TextField fx:id="tfemail" layoutX="391.0" layoutY="188.0" promptText="Email" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../Ressources/Style.css" />
+      <TextField fx:id="tftel" layoutX="391.0" layoutY="256.0" promptText="Téléphone" style="-fx-border-radius: 20; -fx-background-radius: 20;" stylesheets="@../Ressources/Style.css" />
+      <Button fx:id="btEnvoyer" layoutX="518.0" layoutY="316.0" mnemonicParsing="false" onAction="#ajouter" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Envoyer" />
+      <Text fill="#5c5b5b" layoutX="349.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription Parent">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="tfcin" layoutX="391.0" layoutY="156.0" promptText="N°Cin" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../Ressources/Style.css" />
+      <Button fx:id="btnAttach" layoutX="461.0" layoutY="221.0" mnemonicParsing="false" onAction="#Attach" prefHeight="25.0" prefWidth="70.0" styleClass="Button" stylesheets="@../Ressources/Style.css" text="Importer" />
+      <Label layoutX="317.0" layoutY="92.0" text="Nom">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#725fa7" />
+                  <Stop color="#ed7eb0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="315.0" layoutY="127.0" text="Prenom">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#725fa7" />
+                  <Stop color="#ed7eb0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="316.0" layoutY="160.0" text="N°Cin">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#725fa7" />
+                  <Stop color="#ed7eb0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="316.0" layoutY="192.0" text="Email">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#725fa7" />
+                  <Stop color="#ed7eb0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="317.0" layoutY="225.0" text="Photo">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#725fa7" />
+                  <Stop color="#ed7eb0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="317.0" layoutY="260.0" text="N°Telephone">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#725fa7" />
+                  <Stop color="#ed7eb0" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <ImageView fx:id="ImporterImage" fitHeight="150.0" fitWidth="200.0" layoutX="62.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" />
+      <TextField fx:id="tfPhoto" layoutX="391.0" layoutY="221.0" prefHeight="25.0" prefWidth="60.0" promptText="Photo" style="-fx-background-radius: 20; -fx-border-radius: 20;" stylesheets="@../Ressources/Style.css" />
+   </children>
+</AnchorPane>
