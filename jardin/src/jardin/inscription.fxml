@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="rootpane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.InscriptionController">
+    <stylesheets>
+        <URL value="@/Ressources/Style.css" />
+    </stylesheets>
+   <children>
+      <Text fill="#5c5b5b" layoutX="330.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connexion " textAlignment="CENTER">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="24.0" />
+         </font>
+      </Text>
+      <ImageView cacheHint="SPEED" fitHeight="20.0" fitWidth="16.0" layoutX="331.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/nomemail%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView cacheHint="SPEED" fitHeight="20.0" fitWidth="21.0" layoutX="331.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/passwd.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="400.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/Back1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="369.0" layoutY="285.0" text="Mot de passe oublié ?" textFill="#8c8383">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="472.0" layoutY="284.0" prefHeight="18.0" prefWidth="77.0" text="Cliquez ici ?" textFill="#725fa7" textOverrun="CLIP">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Line endX="46.5999755859375" endY="0.399993896484375" fill="#c654ff" layoutX="476.0" layoutY="299.0" startX="-3.60003662109375" startY="0.399993896484375" stroke="#725fa7" strokeWidth="0.5" />
+      <TextField fx:id="tfNomU" layoutX="368.0" layoutY="125.0" promptText="E-mail / Nom utilisateur" style="-fx-border-radius: 20; -fx-background-radius: 20;" />
+      <Button fx:id="btnSinscrire" layoutX="459.0" layoutY="249.0" mnemonicParsing="false" onAction="#inscrire" prefHeight="26.0" prefWidth="112.0" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="S'inscrire" textFill="#ed7eb0" />
+      <Button fx:id="btnConnecter" layoutX="324.0" layoutY="250.0" mnemonicParsing="false" onAction="#connecter" prefHeight="20.0" prefWidth="112.0" styleClass="Button" stylesheets="@../Ressources/Style.css" text="Se connecter" textFill="#f8f8f8" />
+      <Button fx:id="retour" layoutX="523.0" layoutY="354.0" mnemonicParsing="false" onAction="#retour" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Retour" />
+      <PasswordField fx:id="tfPassword" layoutX="368.0" layoutY="182.0" promptText="Mot de passe" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+      <Label fx:id="label" layoutX="14.0" layoutY="14.0" />
+   </children>
+</AnchorPane>

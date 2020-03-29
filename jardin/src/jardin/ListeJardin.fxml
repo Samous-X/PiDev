@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="351.0" prefWidth="643.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.ListeJardinController">
+   <children>
+      <ImageView fx:id="back" fitHeight="351.0" fitWidth="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/Back1.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="Jardins" layoutX="256.0" layoutY="88.0" onMouseClicked="#select" prefHeight="185.0" prefWidth="367.0">
+        <columns>
+          <TableColumn fx:id="tbnom" prefWidth="114.0" text="Nom" />
+            <TableColumn fx:id="tbAdresse" prefWidth="153.0" text="Adresse" />
+            <TableColumn fx:id="tbprix_mois" prefWidth="99.0" text="Prix" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/logo.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ins" layoutX="501.0" layoutY="282.0" mnemonicParsing="false" onAction="#Sinscrire" prefHeight="31.0" prefWidth="114.0" styleClass="Button" stylesheets="@../Ressources/Style.css" text="s'iscrire a ce jardin" textFill="#eee3e3">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="retour" fitHeight="41.0" fitWidth="51.0" layoutX="585.0" layoutY="6.0" onMouseClicked="#retour" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Ressources/return.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

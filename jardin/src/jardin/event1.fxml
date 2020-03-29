@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.Event1Controller">
+   <children>
+      <Pane layoutX="16.0" layoutY="9.0" prefHeight="190.0" prefWidth="232.0" style="-fx-background-color: E588BB; -fx-border-radius: 10;">
+         <children>
+            <Label fx:id="date" layoutX="5.0" layoutY="38.0" prefHeight="106.0" prefWidth="223.0" stylesheets="@../resource/Style.css" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="63.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="246.0" layoutY="9.0" prefHeight="190.0" prefWidth="644.0" style="-fx-background-color: AFA8CE;">
+         <children>
+            <Label fx:id="titre" layoutX="65.0" layoutY="14.0" prefHeight="33.0" prefWidth="441.0" stylesheets="@../resource/Style.css" textFill="WHITE">
+               <font>
+                  <Font name="Candara Italic" size="42.0" />
+               </font>
+            </Label>
+            <Text fx:id="text" fill="WHITE" layoutX="14.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="479.6708984375">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+            <Button fx:id="participer" layoutX="510.0" layoutY="70.0" mnemonicParsing="false" onAction="#participer" prefHeight="51.0" prefWidth="110.0" styleClass="Button2" stylesheets="@../Ressources/Style1.css" text="Participer" />
+            <Label fx:id="temp1" layoutX="82.0" layoutY="142.0" prefHeight="30.0" prefWidth="110.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+            </Label>
+            <Label fx:id="prix" layoutX="486.0" layoutY="149.0" prefHeight="39.0" prefWidth="66.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="temp3" layoutX="219.0" layoutY="145.0" />
+            <Label layoutX="417.0" layoutY="154.0" text="Prix :" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="34.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Ressources/pngguru.com.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="526.0" layoutY="152.0" text="DT" textFill="WHITE">
+               <font>
+                  <Font size="21.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+   <padding>
+      <Insets left="5.0" top="50.0" />
+   </padding>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</AnchorPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="206.0" prefWidth="893.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.Jardin1Controller">
+   <children>
+      <Pane layoutX="16.0" layoutY="9.0" prefHeight="190.0" prefWidth="232.0" style="-fx-background-color: E588BB; -fx-border-radius: 10;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+      <Pane layoutX="246.0" layoutY="9.0" prefHeight="190.0" prefWidth="644.0" style="-fx-background-color: AFA8CE;">
+         <children>
+            <Label fx:id="nomj" layoutX="101.0" layoutY="28.0" />
+            <Label fx:id="adressej" layoutX="101.0" layoutY="68.0" />
+            <Label fx:id="prixj" layoutX="101.0" layoutY="118.0" />
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.BusController">
+   <children>
+      <VBox fx:id="vbox" layoutX="24.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-border-color: #EE82EE; -fx-border-insets: 5; -fx-border-width: 3;">
+         <children>
+            <Label fx:id="id_annonce" />
+            <Separator prefWidth="200.0" />
+            <Text fill="VIOLET" strokeType="OUTSIDE" strokeWidth="0.0" text="Ligne : ">
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </Text>
+            <VBox prefHeight="200.0" prefWidth="284.0">
+               <children>
+                  <Label fx:id="lbl_nbr" prefWidth="122.0" visible="false" />
+                  <Label fx:id="lbl_Nom" alignment="TOP_LEFT" prefHeight="95.0" prefWidth="101.0">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Text fill="VIOLET" fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre de place Disponible" textAlignment="RIGHT">
+                     <font>
+                        <Font name="Corbel" size="18.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lbl_Adresse" prefHeight="31.0" prefWidth="124.0">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator prefWidth="200.0" />
+                  <ImageView fx:id="img_annoce" fitHeight="93.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="57.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="86.0" prefWidth="284.0">
+               <padding>
+                  <Insets left="35.0" right="28.0" top="26.0" />
+               </padding>
+               <children>
+                  <Button fx:id="participer" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" stylesheets="@Style.css" text="Reserver" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="Button" />
+                        <String fx:value="Button2" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="annuler" layoutX="45.0" layoutY="36.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="106.0" stylesheets="@Style.css" text="annuler" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="Button" />
+                        <String fx:value="Button2" />
+                     </styleClass>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

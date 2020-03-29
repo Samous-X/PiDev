@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.DashboardController">
+    <stylesheets>
+        <URL value="@/Ressources/Style.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="9.0" layoutY="9.0" prefHeight="495.0" prefWidth="680.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab text="Acceuil">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="nom" layoutX="134.0" layoutY="171.0" prefHeight="87.0" prefWidth="359.0" textFill="#6b6969">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab text="Membres">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="418.0" prefWidth="578.0" styleClass="Background" stylesheets="@../Ressources/Style.css">
+                     <children>
+                        <TextField fx:id="tfId" layoutX="29.0" layoutY="88.0" promptText="Identifiant" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfNom" layoutX="29.0" layoutY="126.0" promptText="Nom" style="-fx-border-radius: 20; -fx-background-radius: 20;" />
+                        <TextField fx:id="tfEmail" layoutX="29.0" layoutY="164.0" promptText="Email" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfTelephone" layoutX="224.0" layoutY="88.0" promptText="Télephone" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfLogin" layoutX="224.0" layoutY="126.0" promptText="Login" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfPassword" layoutX="224.0" layoutY="164.0" promptText="Password" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TableView fx:id="membres" layoutX="23.0" layoutY="219.0" onMouseClicked="#select" prefHeight="224.0" prefWidth="654.0">
+                          <columns>
+                            <TableColumn fx:id="id" prefWidth="75.0" text="Identifiant" />
+                            <TableColumn fx:id="TcNom" prefWidth="75.0" text="Nom" />
+                              <TableColumn fx:id="TcEmail" prefWidth="173.0" text="Email" />
+                              <TableColumn fx:id="TcTel" prefWidth="109.0" text="Télephone" />
+                              <TableColumn fx:id="TcLogin" prefWidth="89.0" text="Login" />
+                              <TableColumn fx:id="TcPassword" prefWidth="132.0" text="Password" />
+                          </columns>
+                        </TableView>
+                        <Button fx:id="supprimer" layoutX="484.0" layoutY="126.0" mnemonicParsing="false" onAction="#supprimerparent" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Supprimer" />
+                        <Button fx:id="modifier" layoutX="484.0" layoutY="64.0" mnemonicParsing="false" onAction="#modifier" prefHeight="27.0" prefWidth="68.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Modifier" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Enfants">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="Background" stylesheets="@../Ressources/Style.css">
+                     <children>
+                        <TableView fx:id="membres1" layoutX="53.0" layoutY="184.0" onMouseClicked="#select2" prefHeight="268.0" prefWidth="574.0">
+                           <columns>
+                              <TableColumn fx:id="id1" prefWidth="75.0" text="Identifiant" />
+                              <TableColumn fx:id="TcNom1" prefWidth="78.0" text="Nom" />
+                              <TableColumn fx:id="TcPrenom1" prefWidth="98.0" text="Prenom" />
+                              <TableColumn fx:id="TcAge" prefWidth="72.0" text="Age" />
+                              <TableColumn fx:id="TcPhoto1" prefWidth="84.0" text="Photo" />
+                              <TableColumn fx:id="Tcvaccin" prefWidth="64.0" text="Vaccin" />
+                              <TableColumn fx:id="Tcalergie" minWidth="0.0" prefWidth="62.0" text="Alergie" />
+                              <TableColumn fx:id="idpaar" prefWidth="97.0" text="Identifiant Parent" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="btnsupp" layoutX="497.0" layoutY="118.0" mnemonicParsing="false" onAction="#delete" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Supprimer" />
+                        <TextField fx:id="tfId1" layoutX="53.0" layoutY="28.0" promptText="Identifiant" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfNom1" layoutX="53.0" layoutY="62.0" promptText="Nom" style="-fx-border-radius: 20; -fx-background-radius: 20;" />
+                        <TextField fx:id="tfEmail1" layoutX="53.0" layoutY="131.0" promptText="Age" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfPhoto1" layoutX="252.0" layoutY="29.0" promptText="Photo" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfTelephone1" layoutX="252.0" layoutY="62.0" promptText="Vaccin" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfLogin1" layoutX="252.0" layoutY="93.0" promptText="Allergie" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfPassword1" layoutX="252.0" layoutY="131.0" promptText="Identifiant Parent" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <TextField fx:id="tfPrenom1" layoutX="53.0" layoutY="93.0" promptText="Prenom" style="-fx-background-radius: 20; -fx-border-radius: 20;" />
+                        <Button fx:id="modifier1" layoutX="500.0" layoutY="74.0" mnemonicParsing="false" onAction="#modifierenfant" prefHeight="27.0" prefWidth="68.0" style="-fx-border-radius: 20; -fx-background-radius: 20;" styleClass="Button2" stylesheets="@../Ressources/Style.css" text="Modifier" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

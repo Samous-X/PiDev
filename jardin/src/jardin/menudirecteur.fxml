@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="nomjardin" prefHeight="386.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jardin.MenudirecteurController">
+   <children>
+      <ImageView fx:id="back" fitHeight="400.0" fitWidth="294.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/projet/src/Image/Back1.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="378.0" layoutY="53.0" prefHeight="37.0" prefWidth="265.0" text="   Menu Directeur" textFill="#830a77">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="32.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnGererEnfant" layoutX="327.0" layoutY="113.0" mnemonicParsing="false" onAction="#enfant" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer Enfant" />
+      <Button fx:id="btnGererJardin" layoutX="569.0" layoutY="111.0" mnemonicParsing="false" onAction="#jardin" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer jardins" />
+      <Button fx:id="btnGererStore" layoutX="327.0" layoutY="180.0" mnemonicParsing="false" onAction="#store" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer Store" />
+      <Button fx:id="btnGererTrans" layoutX="327.0" layoutY="252.0" mnemonicParsing="false" onAction="#directiEspaceBus" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer Ligne Transport">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="Logo" fitHeight="150.0" fitWidth="200.0" layoutX="46.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/projet/src/Image/86935033_208521286953979_2349905555444727808_n.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="design" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="226.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/projet/src/Image/photo1.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnGererEven" layoutX="570.0" layoutY="323.0" mnemonicParsing="false" onAction="#evenement" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer Evenement" />
+      <Button fx:id="btnGererstaff" layoutX="570.0" layoutY="251.0" mnemonicParsing="false" onAction="#staff" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer Staff" />
+      <Button fx:id="btnGererforum" layoutX="327.0" layoutY="323.0" mnemonicParsing="false" onAction="#forum" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer  Forum">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnGerercmd" layoutX="570.0" layoutY="180.0" mnemonicParsing="false" onAction="#commande" prefHeight="45.0" prefWidth="162.0" styleClass="Button2" stylesheets="@../../../../../Desktop/projet/src/Image/Style.css" text="Gérer Les Commandes" />
+      <Button fx:id="retour" layoutX="660.0" layoutY="22.0" mnemonicParsing="false" onAction="#retour" prefHeight="27.0" prefWidth="74.0" stylesheets="@../Ressources/Style.css" text="Retour">
+         <styleClass>
+            <String fx:value="Button" />
+            <String fx:value="Button2" />
+         </styleClass>
+      </Button>
+   </children>
+</AnchorPane>

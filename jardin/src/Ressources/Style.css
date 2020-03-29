@@ -1,0 +1,38 @@
+
+
+#anchor {
+    -fx-background-image:url('Back1.jpg');
+}
+.Background {
+    
+    -fx-background-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+.Button {
+    -fx-background-radius: 20;
+    -fx-background-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+
+.Button:hover {
+   -fx-background-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+.Button2 {
+    -fx-background-radius: 20;
+    -fx-background-color:#FFFFFF;
+    -fx-border-radius: 20; 
+    -fx-border-color: 
+        
+        linear-gradient(to left, #725FA7, #ED7EB0);
+    -fx-text-fill: linear-gradient(to left, #725FA7, #ED7EB0);
+}
+.Button2:hover {
+   -fx-border-color: 
+        linear-gradient(to left, #725FA7, #ED7EB0);
+   
+}
+        
