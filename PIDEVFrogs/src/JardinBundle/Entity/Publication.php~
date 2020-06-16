@@ -1,0 +1,61 @@
+<?php
+
+namespace JardinBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Publication
+ *
+ * @ORM\Table(name="publication")
+ * @ORM\Entity
+ */
+class Publication
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="texte", type="string", length=255, nullable=false)
+     */
+    private $texte;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="date", nullable=false)
+     */
+    private $date;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="score", type="integer", nullable=false)
+     */
+    private $score;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="categorie", type="string", length=30, nullable=false)
+     */
+    private $categorie;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=528, nullable=false)
+     */
+    private $image;
+
+
+}
+

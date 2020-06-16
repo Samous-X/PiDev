@@ -1,0 +1,75 @@
+{% trans_default_domain 'FOSUserBundle' %}
+{{ form_start(form) }}
+
+<div class="form-group col-md-12">
+        <label for="nom">{{ 'Nom'|trans }}</label>
+        {{ form_widget(form.nom,{'attr':{'class':'form-control'}} ) }}
+
+
+    </div>
+
+    <div class="form-group col-md-12">
+        {{ form_label(form.prenom) }}
+        {{ form_widget(form.prenom,{'attr':{'class':'form-control'}}) }}
+        {{ form_errors(form.prenom) }}
+    </div>
+
+    <div class="form-group col-md-12">
+        {{ form_label(form.username) }}
+        {{ form_widget(form.username,{'attr':{'class':'form-control'}}) }}
+
+    </div>
+
+    <div class="form-group col-md-12">
+        {{ form_label(form.tel) }}
+        {{ form_widget(form.tel,{'attr':{'class':'form-control'}}) }}
+        {{ form_errors(form.tel) }}
+    </div>
+<div class="form-group col-md-12">
+    {{ form_label(form.email) }}
+    {{ form_widget(form.email,{'attr':{'class':'form-control'}}) }}
+    {{ form_errors(form.email) }}
+</div>
+
+
+
+
+<div class="form-group col-md-12">
+    {{ form_label(form.plainPassword.first) }}
+    {{ form_widget(form.plainPassword.first,{'attr':{'class':'form-control'}}) }}
+    {{ form_errors(form.plainPassword.first) }}
+</div>
+
+
+<div class="form-group col-md-12">
+    {{ form_label(form.plainPassword.second) }}
+    {{ form_widget(form.plainPassword.second,{'attr':{'class':'form-control'}}) }}
+    {{ form_errors(form.plainPassword.second) }}
+</div>
+
+    <div class="form-group col-md-12">
+        {{ form_label(form.cin) }}
+        {{ form_widget(form.cin,{'attr':{'class':'form-control'}}) }}
+        {{ form_errors(form.cin) }}
+    </div>
+
+<div class="form-group col-md-12">
+    {{ form_label(form.photo) }}
+    {{ form_widget(form.photo,{'attr':{'class':'form-control'}}) }}
+    {{ form_errors(form.photo) }}
+</div>
+
+
+
+<div class="form-group col-md-12">
+    {{ form_label(form.roles) }}
+    {{ form_widget(form.roles,{'attr':{'class':'form-control'}}) }}
+    {{ form_errors(form.roles) }}
+</div>
+
+
+<div class="form-group col-md-12">
+
+    <input class="btn text-uppercase" type="submit" id="_submit" name="action" value="{{ 'registration.submit'|trans }}" />
+</div>
+{{ form_end(form) }}

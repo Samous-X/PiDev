@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Reclamations list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idreclamation</th>
+                <th>Email</th>
+                <th>Contenu</th>
+                <th>Idutilisateur</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td><a href="{{ path('reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">{{ reclamation.idReclamation }}</a></td>
+                <td>{{ reclamation.email }}</td>
+                <td>{{ reclamation.contenu }}</td>
+                <td>{{ reclamation.idUtilisateur }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('reclamation_show', { 'idReclamation': reclamation.idReclamation }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('reclamation_edit', { 'idReclamation': reclamation.idReclamation }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('reclamation_new') }}">Create a new reclamation</a>
+        </li>
+    </ul>
+{% endblock %}

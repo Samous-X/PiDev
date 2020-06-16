@@ -1,0 +1,35 @@
+
+
+{% block body %}
+    <h1>Contact</h1>
+
+    <table>
+        <tbody>
+            <tr hidden="hidden">
+
+                <td>{{ contact.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ contact.name }}</td>
+            </tr>
+            <tr>
+                <th>Objet</th>
+                <td>{{ contact.subject }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ contact.email }}</td>
+            </tr>
+            <tr>
+                <th>Message</th>
+                <td>{{ contact.message }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <td>{{ contact.date|date("d/m/Y") }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

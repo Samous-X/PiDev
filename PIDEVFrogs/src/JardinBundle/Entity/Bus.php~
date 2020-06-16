@@ -1,0 +1,68 @@
+<?php
+
+namespace JardinBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Bus
+ *
+ * @ORM\Table(name="bus", uniqueConstraints={@ORM\UniqueConstraint(name="Immat", columns={"Immat"})})
+ * @ORM\Entity
+ */
+class Bus
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Id_bus", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idBus;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Immat", type="string", length=50, nullable=false)
+     */
+    private $immat;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ligne", type="string", length=50, nullable=false)
+     */
+    private $ligne;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="horaire", type="time", nullable=false)
+     */
+    private $horaire;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="chauffeur", type="string", length=50, nullable=false)
+     */
+    private $chauffeur;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nbrplace", type="integer", nullable=false)
+     */
+    private $nbrplace;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=500, nullable=false)
+     */
+    private $image;
+
+
+}
+

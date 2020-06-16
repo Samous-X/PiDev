@@ -1,0 +1,211 @@
+{% extends 'LayoutFront.html.twig' %}
+
+{% block body %}
+    <style>
+        body{
+            margin-top:20px;
+
+        }
+
+        .be-comment-block {
+            margin-bottom: 50px !important;
+            border: 1px solid #edeff2;
+            border-radius: 2px;
+            padding: 50px 70px;
+            border:1px solid #ffffff;
+        }
+
+        .comments-title {
+            font-size: 16px;
+            color: #262626;
+            margin-bottom: 15px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-img-comment {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-bottom: 15px;
+        }
+
+        .be-ava-comment {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .be-comment-content {
+            margin-left: 80px;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-name {
+            font-size: 13px;
+            font-family: 'Conv_helveticaneuecyr-bold';
+        }
+
+        .be-comment-content a {
+            color: #383b43;
+        }
+
+        .be-comment-content span {
+            display: inline-block;
+            width: 49%;
+            margin-bottom: 15px;
+        }
+
+        .be-comment-time {
+            text-align: right;
+        }
+
+        .be-comment-time {
+            font-size: 11px;
+            color: #b4b7c1;
+        }
+
+        .be-comment-text {
+            font-size: 13px;
+            line-height: 18px;
+            color: #7a8192;
+            display: block;
+            background: #f6f6f7;
+            border: 1px solid #edeff2;
+            padding: 15px 20px 20px 20px;
+        }
+
+        .form-group.fl_icon .icon {
+            position: absolute;
+            top: 1px;
+            left: 16px;
+            width: 48px;
+            height: 48px;
+            background: #f6f6f7;
+            color: #b5b8c2;
+            text-align: center;
+            line-height: 50px;
+            -webkit-border-top-left-radius: 2px;
+            -webkit-border-bottom-left-radius: 2px;
+            -moz-border-radius-topleft: 2px;
+            -moz-border-radius-bottomleft: 2px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+        }
+
+        .form-group .form-input {
+            font-size: 13px;
+            line-height: 50px;
+            font-weight: 400;
+            color: #b4b7c1;
+            width: 100%;
+            height: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 1px solid #edeff2;
+            border-radius: 3px;
+        }
+
+        .form-group.fl_icon .form-input {
+            padding-left: 70px;
+        }
+
+        .form-group textarea.form-input {
+            height: 150px;
+        }
+
+
+
+    </style>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/css/rating.css') }}" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="{{ asset('public/js/rating.js') }}"></script>
+
+
+    <!-- ================ start banner Area ================= -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right">
+                    <h1 class="text-white">
+                       AVIS
+                    </h1>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                     Les avis de notre clientèle , vous pouvez nous dire qu'est ce que vous pensez
+                    </p>
+                    <div class="link-nav">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+
+    <div class="container" style="padding-top: 20px">
+        <div class="be-comment-block">
+            <h1 class="comments-title">Commentaires ({{ count }})
+            <span class=" pull-right">Note de notre jardin({{ average|number_format(2) }})</span></h1>
+
+            {% for rating in ratings %}
+                <div class="be-comment">
+                    <div class="be-img-comment">
+                        <a href="blog-detail-2.html">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="" class="be-ava-comment">
+                        </a>
+                    </div>
+                    <div class="be-comment-content">
+			<span class="be-comment-name">
+				<a href="blog-detail-2.html">{{ rating.client }} {{ rating.rating|rating(5, "fa-lg" )}}</a>
+			</span>
+                        <span class="be-comment-time">
+				<i class="fa fa-clock-o"></i>
+				  {{ rating.date|date("F d, Y  H:i:s")}}
+			</span>
+                        <p class="be-comment-text">
+                            {{ rating.comment}}
+                        </p>
+                    </div>
+                </div>
+            {% endfor %}
+
+            <br>
+
+            <h4 class="align-content-lg-center">Ajouter votre avis</h4>
+
+            <br>
+
+
+            {{form_start(form, { 'attr': {'class': 'form-block'} })}}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <div class="form-group fl_icon">
+                            <div class="icon"><i class="fa fa-user"></i></div>
+                           {{form_widget(form.client,{ 'attr': {'placeholder': 'Votre nom','class': 'form-input '} })}}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 fl_icon">
+                        <div class="form-group fl_icon">
+
+                            {{form_widget(form.rating)}}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 ">
+                        <div class="form-group">
+                            {{form_widget(form.comment,{ 'attr': {'placeholder': 'Votre avis','class': 'form-input '} })}}
+                        </div>
+                    </div>
+
+                </div> <button type="submit" class="btn btn-primary pull-right">submit</button><div class="alert-msg text-danger" style="text-align: left;">
+                {% if error is defined %}{{ error }}{% endif %}</div>
+            {{form_end(form)}}
+        </div>
+    </div>
+{% endblock %}

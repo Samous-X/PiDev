@@ -1,0 +1,54 @@
+<?php
+
+namespace JardinBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Classe
+ *
+ * @ORM\Table(name="classe")
+ * @ORM\Entity
+ */
+class Classe
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="Id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom_classe", type="string", length=50, nullable=false)
+     */
+    private $nomClasse;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="niveau_classe", type="integer", nullable=false)
+     */
+    private $niveauClasse;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="enfant", type="string", length=20, nullable=false)
+     */
+    private $enfant;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="nombre", type="integer", nullable=false)
+     */
+    private $nombre;
+
+
+}
+

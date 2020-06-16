@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <section class="home-banner-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right">
+
+                </div>
+            </div>
+    </section>
+    <section class="registration-area">
+        <div class="offset-lg-5 ">
+            <div class="course-form-section">
+                <h3 class="text-white">Inscription enfant</h3>
+                <p class="text-white"></p>
+                {{ form_start(form) }}
+                <div class="form-group col-md-12">
+                    <label for="inputname" class="control-label col-form-label">Nom</label>
+
+                    {{ form_widget(form.nom,{'attr':{'class':'form-control'}} ) }}
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="inputname" class="control-label col-form-label">Prenom</label>
+                    {{ form_widget(form.prenom,{'attr':{'class':'form-control'}} ) }}
+
+                </div>
+
+
+                <div class="form-group col-md-12">
+
+                    <label for="inputname" class="control-label col-form-label">Age</label>
+                    {{ form_widget(form.age,{'attr':{'class':'form-control'}} ) }}
+
+
+                </div>
+                {{form_widget(form)}}
+                <div class="col-lg-12 text-center">
+                    <button class="btn text-uppercase">Submit</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        {{ form_end(form) }}
+    </section>
+
+    <ul>
+        <li>
+            <a href="{{ path('enfant_index') }}">Back to the list</a>
+        </li>
+    </ul>
+{% endblock %}

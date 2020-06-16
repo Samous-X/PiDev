@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+<section class="home-banner-area">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-12 banner-right">
+
+            </div>
+        </div>
+</section>
+    <section class="other-feature-area">
+        <div class="container">
+            <div class="feature-inner row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="other-feature-item">
+                        <i class="ti-key"></i>
+                        <h4>Lifetime Access</h4>
+                        <div>
+                            <p>
+                                Lorem ipsum dolor sit amet consec tetur adipisicing elit, sed
+                                do eiusmod tempor incididunt labore. Lorem ipsum dolor sit
+                                amet consec tetur adipisicing elit, sed do eiusmod tempor
+                                incididunt labore.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="registration-area">
+    <div class="offset-lg-2 ">
+        <div class="course-form-section">
+            <h3 class="text-white">Enfant</h3>
+
+
+            <table>
+
+        <tbody>
+        {% for enfant in enfants %}
+
+                <tr>
+                   <th>Nom</th>
+                   <td>{{ enfant.nom }}</td>
+               </tr>
+
+            <tr>
+                <th>Prenom</th>
+                <td>{{ enfant.prenom }}</td>
+            </tr>
+
+            <tr>
+                <th>Age</th>
+                <td>{{ enfant.age }}</td>
+            </tr>
+
+            <tr>
+                <th>Photo</th>
+                <img data-src="{{ asset('img/' ~ enfant.photo) }}" src="{{ asset('img/' ~ enfant.photo) }}" width="200px" height="200px">
+
+            </tr>
+
+                <td>
+                    <ul>
+
+                        <li>
+                            <a class="btn text-uppercase"href="{{ path('enfant_edit', { 'idEnfant': enfant.idEnfant }) }}">Modifier</a>
+                        </li>
+                    </ul>
+                </td>
+
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a class="btn text-uppercase" href="{{ path('enfant_new') }}">Inscription enfant</a>
+        </li>
+    </ul>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

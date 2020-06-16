@@ -1,0 +1,37 @@
+{% extends 'back.html.twig' %}
+{% block content %}
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row mt">
+                <div class="col-md-12">
+                    <div class="content-panel">
+                        <table class="table table-striped table-advance table-hover">
+                            <h4><i class="fa fa-angle-right"></i> Types de réclamations</h4>
+                            <thead>
+                            <th>Id</th>
+                            <th>Type de réclamation</th>
+                            <th><a href="{{ path('catreclamation_new') }}">Ajouter </a></th>
+
+                            </thead>
+                            {% for catReclamation in catReclamations %}
+                                <tbody>
+                                <td>{{ catReclamation.idCategorie }}</td>
+                                <td>{{ catReclamation.type }}</td>
+                                <td>
+                                    <a href="#">
+
+                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                    </a>
+                                </td>
+
+                                </tbody>
+                            {% endfor %}
+                        </table>
+                    </div>
+                    <!-- /content-panel -->
+                </div>
+                <!-- /col-md-12 -->
+            </div>
+        </section>
+    </section>
+{% endblock %}

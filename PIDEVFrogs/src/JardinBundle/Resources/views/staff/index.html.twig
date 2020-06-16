@@ -1,0 +1,78 @@
+{% extends "@User/Page_admin.html.twig" %}
+
+{% block body %}
+
+    <script>
+        $(document).ready( function () {
+            $('#dataTable').DataTable();
+        } );
+    </script>
+<br>
+
+
+    <ul>
+
+            <a class="btn btn-primary" href="{{ path('staff_new') }}">Ajouter un Staff</a>
+
+    </ul>
+
+    <div class="card mb-4">
+        <div class="card-header"><i class="fas fa-table mr-1"></i> Staff </div>
+        <div class="card-body">
+            <div class="table">
+                <div id="dataTable_wrapper" class="dataTables_wrapper">
+                <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom</th>
+                        <th>Prenom</th>
+                        <th>Poste</th>
+                        <th>Statut</th>
+                        <th>Etat de compte</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    {% for staff in staff %}
+                        <tr>
+                            <td><a href="{{ path('staff_show', { 'id': staff.id }) }}">{{ staff.id }}</a></td>
+                            <td>{{ staff.nom }}</td>
+                            <td>{{ staff.prenom }}</td>
+                            <td>{{ staff.poste }}</td>
+                            <td>{{ staff.statut }}</td>
+                            <td>
+                                {% if staff.enabled==1 %}Activé{% else %}Désactivé{% endif %}
+
+
+                            </td>
+                            <td>
+                                <ul style="list-style-type: none;list-style: none;">
+                                    <li>
+                                        {% if staff.enabled==1 %}
+                                        <a class="btn btn-danger" href="{{ path('staff_disable', { 'id': staff.id }) }}">Désactiver</a>
+                                        {% else %}
+                                        <a class="btn btn-info" href="{{ path('staff_enable', { 'id': staff.id }) }}">Activer</a>
+                                        {% endif %}
+
+                                        <a class="btn btn-primary" href="{{ path('staff_edit', { 'id': staff.id }) }}">Modifier</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    <tbody>
+
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+{% endblock %}

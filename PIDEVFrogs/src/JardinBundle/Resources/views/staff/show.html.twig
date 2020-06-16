@@ -1,0 +1,63 @@
+{% extends 'UserBundle::Page_admin.html.twig' %}
+
+{% block body %}
+
+<div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <main>
+    <h1>Staff</h1>
+
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                <div class="card-header"><h3 class="text-center font-weight-light my-4">Profile d'un staff</h3></div>
+                <div class="card-body">
+    <table class="justify-content-center">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ staff.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ staff.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prenom</th>
+                <td>{{ staff.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Poste</th>
+                <td>{{ staff.poste }}</td>
+            </tr>
+            <tr>
+                <th>Statut</th>
+                <td>{{ staff.statut }}</td>
+            </tr>
+            <tr>
+                <th>username</th>
+                <td>{{ staff.username }}</td>
+            </tr>
+            <tr>
+                <th>mail</th>
+                <td>{{ staff.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+
+            <a class="btn btn-primary" href="{{ path('staff_edit', { 'id': staff.id }) }}">Modifier</a>
+
+            {{ form_start(delete_form) }}
+        <button class="btn btn-danger"  type="submit" >Supprimer</button>
+            {{ form_end(delete_form) }}
+
+    </div>
+                </div></div></div></div>
+    <a class="btn btn-info" href="{{ path('staff_index') }}">Retour à la liste </a></div>
+        </main></div></div>
+
+{% endblock %}

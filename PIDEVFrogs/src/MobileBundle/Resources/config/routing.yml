@@ -1,0 +1,23 @@
+mobile_homepage:
+    path:     /
+    defaults: { _controller: MobileBundle:Default:index }
+all:
+    path: /produits/all
+    defaults: { _controller: MobileBundle:Produit:all }
+login:
+    path: /user/{username}
+    defaults: { _controller: MobileBundle:Security:login }
+aff:
+    path:     /Enfant/aff/{id}
+    defaults: { _controller: MobileBundle:Enfant:enfants }
+new_enfant:
+    path:     /Enfant/new
+    defaults: { _controller: MobileBundle:Enfant:new }
+
+dell_enfant:
+    path:     /Enfant/dell
+    defaults: { _controller: MobileBundle:Enfant:dell }
+newPanier:
+    path:     /Panier/new
+    defaults: { _controller: MobileBundle:Panier:newPanier }
+
