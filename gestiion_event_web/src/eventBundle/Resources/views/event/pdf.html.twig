@@ -1,0 +1,430 @@
+{% block body %}
+
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Example 1</title>
+        <style> .clearfix:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            a {
+                color: #5D6975;
+                text-decoration: underline;
+            }
+
+            body {
+                position: relative;
+                width: 21cm;
+                height: 29.7cm;
+                margin: 0 auto;
+                color: #001028;
+                background: #FFFFFF;
+                font-family: Arial, sans-serif;
+                font-size: 12px;
+                font-family: Arial;
+            }
+
+            header {
+                padding: 10px 0;
+                margin-bottom: 30px;
+            }
+
+            #logo {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            #logo img {
+                width: 90px;
+            }
+
+            h1 {
+                border-top: 1px solid  #5D6975;
+                border-bottom: 1px solid  #5D6975;
+                color: #5D6975;
+                font-size: 2.4em;
+                line-height: 1.4em;
+                font-weight: normal;
+                text-align: center;
+                margin: 0 0 20px 0;
+
+            }
+
+            #project {
+                float: left;
+            }
+
+            #project span {
+                color: #5D6975;
+                text-align: right;
+                width: 52px;
+                margin-right: 10px;
+                display: inline-block;
+                font-size: 0.8em;
+            }
+
+            #company {
+                float: right;
+                text-align: right;
+            }
+
+            #project div,
+            #company div {
+                white-space: nowrap;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                border-spacing: 0;
+                margin-bottom: 20px;
+            }
+
+            table tr:nth-child(2n-1) td {
+                background: #F5F5F5;
+            }
+
+            table th,
+            table td {
+                text-align: center;
+            }
+
+            table th {
+                padding: 5px 20px;
+                color: #5D6975;
+                border-bottom: 1px solid #C1CED9;
+                white-space: nowrap;
+                font-weight: normal;
+            }
+
+            table .service,
+            table .desc {
+                text-align: left;
+            }
+
+            table td {
+                padding: 20px;
+                text-align: right;
+            }
+
+            table td.service,
+            table td.desc {
+                vertical-align: top;
+            }
+
+            table td.unit,
+            table td.qty,
+            table td.total {
+                font-size: 1.2em;
+
+            }
+
+            table td.grand {
+                border-top: 1px solid #5D6975;;
+            }
+
+            #notices .notice {
+                color: #5D6975;
+                font-size: 1.2em;
+            }
+
+            footer {
+                color: #5D6975;
+                width: 100%;
+                height: 30px;
+                position: absolute;
+                bottom: 0;
+                border-top: 1px solid #C1CED9;
+                padding: 8px 0;
+                text-align: center;
+            }</style>
+
+
+    </head>
+    <body>
+    <header class="clearfix">
+
+        {% for a in f %}
+            {% if loop.index0 == 0 %}
+                 <h1>{{ a.idEvent.titre }}</h1>
+
+                 <div id="company" class="clearfix">
+                    <div>Bloom</div>
+
+                <div>Frogs</div>
+            <div>70 685 685</div>
+            <div><a href="mailto:company@example.com">Bloom@gmail.com</a></div>
+        </div>
+        <div id="project">
+            <tr>
+
+
+
+                <div><span>Type</span> {{ a.idEvent.idType.typeEvent }}</div>
+                <div><span>Description</span>{{  a.idEvent.description }}</div>
+                <div><span>EMAIL</span> <a href="mailto:john@example.com">john@example.com</a></div>
+                <div><span>DATE</span> <td >{{  a.idEvent.dateevent|date('Y-m-d')  }}</td></div>
+                <div><span>PRIX</span>
+                    <td>{{  a.idEvent.prix  }} dt</td></div>
+
+
+        </div>
+{% endif %}
+        {% endfor %}
+    </header>
+    <main>
+
+        <table>
+            <thead>
+            <tr>
+
+                <th class="service">nom</th>
+                <th class="service">nombre d'enfant</th>
+                <th class="service">email</th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+
+
+            {% for participation in f %}
+
+            <tr>
+                <td class="service">{{ participation.idUser.username}}</td>
+                <td   class="service">{{ participation.nbrenfant }}</td>
+                <td  class="service">{{participation.idUser.email}}</td>
+
+
+            </tr>
+
+
+
+
+            {% endfor %}
+
+            </tbody>
+        </table>
+        <div id="notices">
+            <div>NOTICE:</div>
+            <div class="notice">A finance charge of 1.5% will be made on unpaid balances after 30 days.</div>
+        </div>
+    </main>
+    <footer>
+        Invoice was created on a computer and is valid without the signature and seal.
+    </footer>
+    </body>
+    </html>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel ="stylesheet" href="{{ asset('css/bootstrap2/pdf.css')}}">
+
+
+    </head>
+    <body>
+    {#<?= realpath('pdf.css');?>    {% for facture in f %}
+    </tr><center><strong><h1 style="color: #7f0055">{{title}}</h1></center></strong>
+
+    <center><th>NumFacture</th>
+        <td>{{  facture.NumFacture  }}</td></center>
+
+        <label>De</label>
+        <tr>
+            <th>Fournisseur</th>
+            <th>{{ facture.Fournisseur.Name }}</th>
+            <br><th>Telephone</th>
+
+            <td>{{  facture.telephone  }}</td>
+            <br><th>Date</th>
+
+            <td>{{  facture.Date|date('Y-m-d')  }}</td>
+
+
+            {% endfor%}#}
+    {# </tr><center><strong><h1 style="color: #7f0055">{{title}}</h1></center></strong>#}
+
+
+    {#     <center><table border="2" width="100" height="100" style="background:#cde8eb" >
+         <tr>
+             <th style="width:70px;">Typeproduct</th>
+             <th>Montant</th>
+             <th>prix</th>
+             <th>quantite</th>
+         </tr>
+         <tbody>
+
+
+         <tr>
+
+             {% for facture in f %}
+
+         <tr>
+             <th>{{ facture.typeProduct }}</th>
+
+             <th>{{ facture.prix*facture.quantite }}dt</th>
+
+
+
+
+             <th>{{facture.prix}}</th>
+
+             <th>{{facture.quantite}}</th>
+
+
+
+         </tr>
+
+         <?php endfor ?>
+
+         <tr class="total total-first" >
+             <td colspan="2" class="total_label">Total HT</td>
+             <td><strong>{{ facture.prix*facture.quantite}} dt</strong></td>
+
+         </tr>
+
+         <tr class="total" >
+             <td colspan="2" class="total_label">Taxe (20.00%)</td>
+             <td> <strong>{{   (facture.prix*facture.quantite)*0.2}} dt</strong></td>
+
+         </tr>
+         <tr class="total total-big" >
+             <td colspan="2" class="total_label">Total TTC</td>
+             <td><strong>{{   ((facture.prix*facture.quantite)*0.2)+(facture.prix*facture.quantite)}} dt</strong> </td>
+
+         </tr>
+
+         {% endfor %}</center>
+         </tbody>
+
+
+
+     </table>
+
+        <th style="color: #0a6ebd; padding: 35px">_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _</th>
+
+     </center>
+
+
+     {#<p>This is my awesome first PDF generated using Snappy in my Symfony 3 project.</p>
+
+     <p>Image : </p><br>
+     <img height="200" src="PH.jpg"/>
+     <p>SVG Example : </p><br>
+     <div>
+         <!-- Do not forget to give width and height to your svg
+             use PLAIN SVG directly (<svg>content</svg>)
+             Tiger SVG EXAMPLE : https://upload.wikimedia.org/wikipedia/commons/f/fd/Ghostscript_Tiger.svg
+         -->
+     </div>
+     <p>Canvas Example with Javascript: </p><br>
+     <div>
+         <canvas id="myCanvas" width="300" height="200"/>
+     </div>
+     <hr>
+     <span id="dinamic-content"></span>
+     <script>
+         document.getElementById("dinamic-content").innerHTML = 'This string has been appended using javascript';
+
+         // Draw circle on canvas
+         var c = document.getElementById("myCanvas");
+         var ctx = c.getContext("2d");
+         ctx.beginPath();
+         ctx.arc(100,75,50,0,2*Math.PI);
+         ctx.stroke();
+     </script>#}
+    </body>
+    </html>
+
+{% endblock body %}
+{#<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="pdf.css">
+
+</head>
+<body>
+    <?= realpath('pdf.css');?>
+    <h1>Facture</h1>
+    <div class="adress-from">
+        <div class="adress_label">De</div>
+        <div class="adress_content">
+            S.A.S Vignerons de Montfrin <br />
+            42 rue quelque chose<br/>
+            30XYZ Montfrin
+        </div>
+    </div>
+
+    <div class="adress-to">
+        <div class="adress_label">Pour</div>
+        <div class="adress_content">
+            S.A.S Vignerons de Montfrin <br />
+            42 rue quelque chose<br/>
+            30XYZ Montfrin
+        </div>
+    </div>
+
+    <div class="infos">
+        <div class="infos_label">Facture n°</div>
+        <div class="infos_content">25</div>
+        <div class="infos_label">émise le</div>
+        <div class="infos_content">25/12/98</div>
+
+
+    </div>
+
+    <div class="cb"></div>
+
+    <table class="items">
+
+        <thead>
+            <tr>
+                <th>description</th>
+                <th>Prix HT</th>
+                <th>Prix TTC</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <?php for($i=0; $i<4; $i++): ?>
+            <tr>
+                <td>Oracle bouteilles</td>
+                <td style="width: 78px"> 4.00 €</td>
+                <td style="width: 108px">4.80 €</td>
+            </tr>
+            <?php endfor ?>
+
+            <tr class="total total-first" >
+                <td colspan="2" class="total_label">Total HT</td>
+                <td><strong>40,00 €</strong></td>
+
+            </tr>
+
+            <tr class="total" >
+                <td colspan="2" class="total_label">Taxe (20.00%)</td>
+                <td> <strong>08,00 €</strong></td>
+
+            </tr>
+            <tr class="total total-big" >
+                <td colspan="2" class="total_label">Total TTC</td>
+                <td><strong>48,00 €</strong> </td>
+
+            </tr>
+        </tbody>
+
+    </table>
+
+    <footer>
+        SAS VIGNERONS DE MONTFRIN, route de la gare 30490 Montfrin, Tel/Fax: 04 66 57 53 63</footer>
+
+</body>
+</html>#}

@@ -1,0 +1,75 @@
+event_homepage:
+    path:     /
+    defaults: { _controller: eventBundle:Default:index }
+Ajoutevent:
+    path:     /responsable/Ajoutevent
+    defaults: { _controller: eventBundle:event:Addevent }
+Ajouttype:
+    path:     /responsable/Ajouttype
+    defaults: { _controller: eventBundle:type:Addtype }
+favoris_Ajout:
+    path:     /responsable/Ajouterfavoris/{id}
+    defaults: { _controller: eventBundle:favoris:Addfavoris }
+
+event_Front_Affiche:
+    path:     /front/Afficheevent
+    defaults: { _controller: eventBundle:event:ListeventFront }
+list_event:
+    path:     /responsable/Listevent
+    defaults: { _controller: eventBundle:event:Listevent }
+
+list_type:
+    path:     /responsable/Listtype
+    defaults: { _controller: eventBundle:type:Listtype }
+
+event_Supprime:
+    path:     /responsable/Supprime/{id}
+    defaults: { _controller: eventBundle:event:Supprime }
+
+type_Supprime:
+    path:     /responsable/Supprimetype/{id}
+    defaults: { _controller: eventBundle:type:Supprime }
+
+event_Modifier:
+    path:     /responsable/Afficheevent/{id}
+    defaults: { _controller: eventBundle:event:editevent }
+
+participation_Ajout:
+    path:     /responsable/Ajouterparticipation/{id}
+    defaults: { _controller: eventBundle:participation:Addparticipation}
+favoris_Front_Affiche:
+    path:     /front/Affichefavoris
+    defaults: { _controller: eventBundle:favoris:ListfavorisFront}
+favoris_Supprime:
+    path:     /front/Supprime/{id}
+    defaults: { _controller: eventBundle:favoris:favorisSupprime }
+
+facture2:
+    path: /pdf/{id}
+    defaults: {_controller: eventBundle:participation:pdf }
+
+type_Modifier:
+    path:     /responsable/Affichetype/{id}
+    defaults: { _controller: eventBundle:type:edittype }
+
+find_user:
+    path: /find_user/{username}
+    defaults: {_controller: eventBundle:participation:find_user }
+find_event:
+    path: /find_event
+    defaults: {_controller: eventBundle:participation:find_event }
+mob_participer:
+    path: /mob_participer/{id}/{id_u}
+    defaults: {_controller: eventBundle:participation:mob_participer }
+
+my_event:
+    path: /my_event/{id}
+    defaults: {_controller: eventBundle:participation:my_events }
+
+checkParticipationMob:
+    path: /testPar/{id}/{idu}
+    defaults: {_controller: eventBundle:participation:checkParticipationMob }
+
+suppPar:
+    path: /suppPar/{id}/{id_u}
+    defaults: {_controller: eventBundle:participation:suppPar }
